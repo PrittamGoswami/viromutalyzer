@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "viromutalyzer"
+version = "0.1.0"
+description = "A CLI tool and library for virus mutation analysis"
+authors = [{ name = "Prittam Goswami", email = "prittamgoswami.in@gmail.com" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "biopython", 
+    "numpy",
+    "pandas",
+    "typer"
+]
+
+[project.scripts]
+viromutalyzer = "viromutalyzer.cli:main"
+
+[tool.setuptools]
+packages = ["viromutalyzer"]
+
+[tool.setuptools.package-dir]
+"" = "src"
